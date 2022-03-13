@@ -5,7 +5,7 @@
 
 TurboDyno, turbo, clax, dynamic property maker and mapper using Reflection
 ## Authors
-<b>Volkan Güven ® KnoxGoN - 2022</b>
+__Volkan Güven ® KnoxGoN - 2022__
 
 [![@Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/volkan-g%C3%BCven-108883133)
 [![@GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=whit)](https://github.com/knoxgon)
@@ -97,7 +97,7 @@ In the following list, you'll see different usages of Clax.
 
 Clax is the TurboDyno facility class to be able to use necessary functions. Core methods reside within Clax.
 
-1. <b>The first example lets you map, copy and return a dynamic type of <b>PersonRecord</b>. It solely copies properties from the provided generic type.</b>
+1. The first example lets you map, copy and return a dynamic type of __PersonRecord__. It solely copies properties from the provided generic type.
 
 ```csharp
 using System;
@@ -129,7 +129,7 @@ void static main()
 
 ```
 
-2. <b>Let's create an arbitrary number of properties by passing a property list this time.</b>
+2. __Let's create an arbitrary number of properties by passing a property list this time.__
 
 ```csharp
 void static main()
