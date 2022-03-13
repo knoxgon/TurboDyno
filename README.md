@@ -49,7 +49,7 @@ Install-Package Knoxgon.TurboDyno -Version 5.1.0.3
 ## Version History
 - 5.1.0.3
 
-        Feature: Converted remaining extensions functions to support generic type
+        Feature: Added support to directly get dyno type attributes via GetDynoProperties
 - 5.1.0.2
 
         Bugfix: Erroneous value returned from from the passed token on DynoPropertyValues
