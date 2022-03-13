@@ -42,15 +42,21 @@ Since this project is created in a relatively short time (ca 6 hours), I haven't
 Package manager installation
 
 ```ps
-Install-Package Knoxgon.TurboDyno -Version 5.1.0.1
+Install-Package Knoxgon.TurboDyno -Version 5.1.0.2
 
 ```
 
 ## Version History
+- 5.1.0.2
+
+        Bugfix: Erroneous value returned from from the passed token on DynoPropertyValues
 - 5.1.0.1
+        
         Added support for .NET 5.0, .Net Framework 4.8 and 4.7.2
 - 5.1.0
+        
         Stabilized and fully tested. It is now in Beta-phase.
+
 - 5.0.0 *Deprecated*
 - 4.4.5.5 *Deprecated*
 - 4.4.5.4 *Deprecated*
