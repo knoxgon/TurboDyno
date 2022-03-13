@@ -47,6 +47,9 @@ Install-Package Knoxgon.TurboDyno -Version 5.1.0.2
 ```
 
 ## Version History
+- 5.1.0.3
+
+        Feature: Added overloading method for GetDynoProperties to support object types
 - 5.1.0.2
 
         Bugfix: Erroneous value returned from from the passed token on DynoPropertyValues
