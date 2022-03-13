@@ -42,14 +42,14 @@ Since this project is created in a relatively short time (ca 6 hours), I haven't
 Package manager installation
 
 ```ps
-Install-Package Knoxgon.TurboDyno -Version 5.1.0.2
+Install-Package Knoxgon.TurboDyno -Version 5.1.0.3
 
 ```
 
 ## Version History
 - 5.1.0.3
 
-        Feature: Added overloading method for GetDynoProperties to support object types
+        Feature: Converted remaining extensions functions to support generic type
 - 5.1.0.2
 
         Bugfix: Erroneous value returned from from the passed token on DynoPropertyValues
@@ -175,25 +175,22 @@ void static main()
 
 | Name | Extension | Parameters |Returns| Description|
 | ------------- |:--------:|-------------|--------|--------------|
-|ToDynoList\<T\>| T || List\<T\> | Converts created type object to a list ||
-|GetDynoProperties\<T\>| Type | | Converts created type object to a list |Gets the list of object properties|
-|DynoPropertyValues | List\<object\> ||IEnumerable\<object\>| Returns a list of values of each property in a dyno list|
-|DynoPropertyValues\<T\>|List\<T\>||IEnumerable\<object\>|Returns a list of values of each property in a generic dyno list|
-|DynoPropertyValues\<object\>|List\<object\>|string propertyName,<br/> string token,<br/>DynoFilterAction action|IEnumerable\<object\> |Returns a filtered list of values of each property in a dyno list with a single name predicate. <br/>This specific method allows to keep or remove the provided string token from the start of the value from the targeted property|
-|DynoPropertyNames|List\<object\>||IEnumerable\<string\>|Returns a list of property names for each object in the passed dyno list
-| New    | object ||object | Creates and returns a dyno instance of your object. Type is auto fetched from the object.|
-| New      | Type ||object| Creates and returns a dyno instance of your type.|
-| NewList      | object ||List\<object\>| Creates a dyno instance list of your object. Type is auto fetched from the object.|
-| NewList      | Type ||List\<object\>| Creates a dyno instance list of your type.|
+| ToDynoList\<T\>| T || List\<T\> | Converts created type object to a list
+| GetDynoProperties\<T\>| Type | | IEnumerable\<object\> |Gets the list of object properties
+| DynoPropertyValues\<T\>|List\<T\>||IEnumerable\<object\>|Returns a list of values of each property in a generic dyno list
+| DynoPropertyValues\<object\>|List\<object\>|string propertyName,<br/> string token,<br/>DynoFilterAction action|IEnumerable\<object\> |Returns a filtered list of values of each property in a dyno list with a single name predicate. <br/>This specific method allows to keep or remove the provided string token from the start of the value from the targeted property
+| DynoPropertyNames|List\<object\>||IEnumerable\<string\>|Returns a list of property names for each object in the passed dyno list
+| New    | T ||object | Creates and returns a dyno object. Type is auto fetched from the object.|
+| NewList      | T ||List\<object\>| Creates a dyno list. Type is auto fetched from the object.|
 
 ## DynoFilterAction enum API
 The following enums are currently only needed to be used on DynoPropertyValues\<object\>
 
 | Name | Value | Description |
 | ------------- |:--------:|--------|
-|NO_ACTION| 0 |No modification action is performedon the property values upon calling DynoPropertyValues extension method|
-|KEEP| 1 | Keeping the provided token on the pointed propertyName's value
-|REMOVE| 2 |Removing the provided token on the pointed propertyName's value|
+| NO_ACTION| 0 |No modification action is performedon the property values upon calling DynoPropertyValues extension method
+| KEEP| 1 | Keeping the provided token on the pointed propertyName's value
+| REMOVE| 2 |Removing the provided token on the pointed propertyName's value
 
 # Maintainers
 
