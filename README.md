@@ -187,7 +187,7 @@ void static main()
 The following enums are currently only needed to be used on DynoPropertyValues\<object\>
 
 | Name | Value | Description |
-| ------------- |:--------:||
+| ------------- |:--------:|--------|
 |NO_ACTION| 0 |No modification action is performedon the property values upon calling DynoPropertyValues extension method|
 |KEEP| 1 | Keeping the provided token on the pointed propertyName's value
 |REMOVE| 2 |Removing the provided token on the pointed propertyName's value|
