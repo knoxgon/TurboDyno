@@ -62,10 +62,10 @@ Install-Package Knoxgon.TurboDyno -Version 5.2.0.0
         Feature: Added support to directly get dyno type attributes via GetDynoProperties
 - 5.1.0.2
 
-        Bugfix: Erroneous value returned from from the passed token on DynoPropertyValues
-- 5.1.0.1
-        
-        Added support for .NET 5.0, .Net Framework 4.8 and 4.7.2
+        Added support for .NET 5.0, .Net Framework 4.8 and 4.7.2.
+        Bugfix: Erroneous value returned from from the passed token on 'DynoPropertyValues'.
+        version 5.1.0.1 is deprecated due to the critical bugfix.
+- 5.1.0.1 *Deprecated*
 - 5.1.0
         
         Stabilized and fully tested. It is now in Beta-phase.
