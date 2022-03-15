@@ -20,7 +20,9 @@ When one needs to create a class with dynamic properties, it shouldn't be hard t
 
 I've created this library as a hobby project to help with my work duties. With this library, you could create a whole new class by either passing arbitrary number of properties or passing a huge class with properties, map it, create a new instance of it and even keep the property record of the created class at runtime.
 
-Since this project is created in a relatively short time (approximately 6 hours), I haven't had time to create support for nested object properties and custom object types. But don't worry! It's on the way!
+~~Since this project is created in a relatively short time (approximately 6 hours), I haven't had time to create support for nested object properties and custom object types. But don't worry! It's on the way!~~
+
+All types are supported with version >= 5.2.0.0. Read release notes under __Version History__
 
 # Requirements
 
