@@ -43,10 +43,18 @@ Package manager installation
 
 ```ps
 Install-Package Knoxgon.TurboDyno -Version 5.1.0.3
-
 ```
 
 ## Version History
+- 5.2.0.0
+        
+        Huge improvement. Complex data types and structured can now be created with this version.
+        Affected APIs:
+			'Create': 
+        	1. Improvised Create function. Removed 'library' from the parameter list.
+        	2. Added parameter 'assemblies' to allow user to add assemblies upon need.
+        	3. All types for properties are now supported. Including nullable types.
+       Beta-phase is complete.
 - 5.1.0.3
 
         Feature: Added support to directly get dyno type attributes via GetDynoProperties
@@ -80,28 +88,10 @@ Install-Package Knoxgon.TurboDyno -Version 5.1.0.3
 
 
 # Supported property types
+All types are supported with version >= 5.2.0.0
 
-*Nullable of primitive types are not fully tested. They may be unstable. They will be released after detailed test executions.
-DateTime and nullable of its type is however fully supported.*
-
-* bool
-* decimal
-* float
-* double
-* long
-* ulong
-* int
-* uint
-* short
-* ushort
-* DateTime
-* DateTime?
-* byte
-* nint
-* nuint
-* sbyte
-* char
-
+~~*Nullable of primitive types are not fully tested. They may be unstable. They will be released after detailed test executions.
+DateTime and nullable of its type is however fully supported.*~~
 
 ## Example usage
 
@@ -126,14 +116,13 @@ public class PersonRecord
 void static main()
 {
     //Creates new class from PersonRecord's properties.
-    Type dynamicPersonType = Clax.Create<PersonRecord>(className: "MyDynamicPersonClass");
+    Type type = Clax.Create<PersonRecord>(className: "MyDynamicPersonClass");
 
     //Gets the list of property info for each created dynamic property
     IEnumerable<Reflection.PropertyInfo> dynamicPersonProperties = dynamicPersonObject.GetDynoProperties();
     
     //Creates and returns a newly created list of the object type.
-    //Kind of like -> var list = new List<int>();
-    List<object> dynamicPersonObjectList = dynamicPersonType.NewList();
+    List<object> dynamicPersonObjectList = type.NewList();
     
     //Returns the created property names.
     var dynamicPersonPropertyNames = Clax.GetPropertyNames();
@@ -152,17 +141,17 @@ void static main()
     //Properties: string: RepoId, bool: Active
     var listOfProps = ...;
     
-    Type dynamicPersonType = Clax.Create(listOfProps, className: "MyDynamicPersonClass");
+    Type type = Clax.Create(listOfProps, className: "MyDynamicPersonClass");
 
     //Gets the list of property info for each created dynamic property
     //You'll get RepoId and Active
     IEnumerable<Reflection.PropertyInfo> dynamicPersonProperties = dynamicPersonObject.GetDynoProperties();
     
     //A list instance of the new generated class type with RepoId and Active as members.
-    List<object> dynamicPersonObjectList = dynamicPersonType.NewList();
+    List<object> dynamicPersonObjectList = type.NewList();
     
     //Returns the created property names.
-    var dynamicPersonPropertyNames = Clax.GetPropertyNames();
+    List<string> dynamicPersonPropertyNames = Clax.GetPropertyNames();
 }
 ```
 
@@ -170,8 +159,8 @@ void static main()
 
 | Name  | Parameters |Returns| Description|
 | ------------- |-------------|--------|--------------|
-| Create        | IEnumerable\<PropertyInfo\> properties<br/>string className<br/> string optionalNamespace<br/>params string[] libraries| Type | Builds and creates a dynamic class with passed properties. Properties can be created, mapped and passed by the user. |
-| Create\<T>    | string className<br/>string optionalNamespace<br/>params string[] libraries     |Type| Builds and creates a dynamic class from the provided generic class T. Properties are assigned with getter and setter.|
+| Create        | IEnumerable\<PropertyInfo\> properties<br/>string className<br/> string optionalNamespace<br/>params string[] assemblies| Type | Builds and creates a dynamic class with passed properties. Properties can be created, mapped and passed by the user|
+| Create\<T>    | string className<br/>string optionalNamespace<br/>params string[] assemblies|Type| Builds and creates a dynamic class from the provided generic class T. Properties are assigned with getter and setter.|
 | GetPropertyNames      | |List\<string\>| A list of property names of the original passed type.|
 
 ## DynoExtensions Function API
