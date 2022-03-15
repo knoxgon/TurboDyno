@@ -44,7 +44,7 @@ All types are supported with version >= 5.2.0.0. Read release notes under __Vers
 Package manager installation
 
 ```ps
-Install-Package Knoxgon.TurboDyno -Version 5.1.0.3
+Install-Package Knoxgon.TurboDyno -Version 5.2.0.0
 ```
 
 ## Version History
