@@ -70,26 +70,9 @@ Install-Package Knoxgon.TurboDyno -Version 5.2.0.0
         
         Stabilized and fully tested. It is now in Beta-phase.
 
-- 5.0.0 *Deprecated*
-- 4.4.5.5 *Deprecated*
-- 4.4.5.4 *Deprecated*
-- 4.4.5.3 *Deprecated*
-- 4.4.5 *Deprecated*
-- 4.4.5 *Deprecated*
-- 4.4.1.2 *Deprecated*
-- 4.3.5.3 *Deprecated*
-- 4.3.5.2 *Deprecated*
-- 4.3.0 *Deprecated*
-- 4.2.0 *Deprecated*
-- 4.1.5 *Deprecated*
-- 4.1.10 *Deprecated*
-- 2.2.3.25 *Deprecated*
-- 2.1.5.10 *Deprecated*
-- 1.0.0 *Deprecated*
+- 1.0.0 <> 5.0.0 *Deprecated*
 
-
-
-# Supported property types
+# Supported types
 All types are supported with version >= 5.2.0.0
 
 ~~*Nullable of primitive types are not fully tested. They may be unstable. They will be released after detailed test executions.
