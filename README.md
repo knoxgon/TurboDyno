@@ -5,9 +5,9 @@
 
 TurboDyno, turbo, clax, dynamic property maker and mapper using Reflection
 ## Authors
-__Volkan Güven ® KnoxGoN - 2022__
+__Wolf Guven ® KnoxGoN - 2022__
 
-[![@Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/volkan-g%C3%BCven-108883133)
+[![@Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wolf-g-108883133/)
 [![@GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=whit)](https://github.com/knoxgon)
 
 # Introduction
